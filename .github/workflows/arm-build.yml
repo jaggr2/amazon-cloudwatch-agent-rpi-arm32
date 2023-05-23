@@ -28,7 +28,7 @@ jobs:
         submodules: 'true'
 
     - name: Build
-      run: make package-deb
+      run: make nightly-release
       working-directory: amazon-cloudwatch-agent
 
     - name: Upload Artifact
