@@ -41,6 +41,7 @@ LINTER = $(TOOLS_BIN_DIR)/golangci-lint
 
 prepackage: clean test build
 release: prepackage package-rpm package-deb package-win package-darwin
+armhf-release: prepackage package-deb
 nightly-release: prepackage package-rpm package-deb package-win
 nightly-release-mac: prepackage package-darwin
 

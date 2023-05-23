@@ -28,7 +28,7 @@ jobs:
         submodules: 'true'
 
     - name: Build
-      run: make nightly-release
+      run: make armhf-release
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
