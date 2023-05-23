@@ -29,6 +29,7 @@ jobs:
 
     - name: Build
       run: make package-deb
+      working-directory: amazon-cloudwatch-agent
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
