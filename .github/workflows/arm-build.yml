@@ -31,7 +31,7 @@ jobs:
       run: make nightly-release
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
-        name: amazon-cloudwatch-agent.deb
-        path: amazon-cloudwatch-agent/build/bin/linux/armhf/amazon-cloudwatch-agent.deb
+        name: amazon-cloudwatch-agent-binaries
+        path: build/bin
