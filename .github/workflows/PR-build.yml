@@ -3,34 +3,35 @@
 
 name: PR Build
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - '**/*.md'
-      - 'NOTICE'
-      - 'RELEASE_NOTES'
-      - 'THIRD-PARTY'
-      - 'LICENSE'
-      - '.github/**'
-      - '!.github/workflows/PR-build.yml'
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main
+  #   paths-ignore:
+  #     - '**/*.md'
+  #     - 'NOTICE'
+  #     - 'RELEASE_NOTES'
+  #     - 'THIRD-PARTY'
+  #     - 'LICENSE'
+  #     - '.github/**'
+  #     - '!.github/workflows/PR-build.yml'
 
-  pull_request:
-    branches: 
-      - main 
-    types: 
-      - opened
-      - synchronize
-      - reopened
-      - ready_for_review
-    paths-ignore:
-      - '**/*.md'
-      - 'NOTICE'
-      - 'RELEASE_NOTES'
-      - 'THIRD-PARTY'
-      - 'LICENSE'
-      - '.github/**'
-      - '!.github/workflows/PR-build.yml'
+  # pull_request:
+  #   branches: 
+  #     - main 
+  #   types: 
+  #     - opened
+  #     - synchronize
+  #     - reopened
+  #     - ready_for_review
+  #   paths-ignore:
+  #     - '**/*.md'
+  #     - 'NOTICE'
+  #     - 'RELEASE_NOTES'
+  #     - 'THIRD-PARTY'
+  #     - 'LICENSE'
+  #     - '.github/**'
+  #     - '!.github/workflows/PR-build.yml'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref_name }}

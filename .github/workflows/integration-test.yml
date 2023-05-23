@@ -12,18 +12,19 @@ env:
   CWA_GITHUB_TEST_REPO_URL: "https://github.com/aws/amazon-cloudwatch-agent-test.git"
   CWA_GITHUB_TEST_REPO_BRANCH: "main"
 
+
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - '**/*.md'
-      - 'NOTICE'
-      - 'RELEASE_NOTES'
-      - 'THIRD-PARTY'
-      - 'LICENSE'
-      - '.github/**'
-      - '!.github/workflows/integration-test.yml'
+  # push:
+  #   branches:
+  #     - main
+  #   paths-ignore:
+  #     - '**/*.md'
+  #     - 'NOTICE'
+  #     - 'RELEASE_NOTES'
+  #     - 'THIRD-PARTY'
+  #     - 'LICENSE'
+  #     - '.github/**'
+  #     - '!.github/workflows/integration-test.yml'
   workflow_dispatch:
     inputs:
       plugins:
