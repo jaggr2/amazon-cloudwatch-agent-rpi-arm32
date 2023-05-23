@@ -29,7 +29,6 @@ jobs:
 
     - name: Build
       run: make nightly-release
-      working-directory: amazon-cloudwatch-agent
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
